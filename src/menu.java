@@ -1,7 +1,7 @@
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
-public class menu {
+public class Menu {
 
     public static int menuOpcionUno(String[] opcionesMenu, String titulo) {
         String input = (String) JOptionPane.showInputDialog(
@@ -9,14 +9,14 @@ public class menu {
             opcionesMenu, 
             titulo, 
             JOptionPane.PLAIN_MESSAGE,  
-            new ImageIcon("C:\\Users\\Usuario\\Desktop\\tp final\\tp-final\\src\\img\\conversor.png"), 
+            new ImageIcon("C:\\Users\\Usuario\\Desktop\\tp-final\\src\\img\\conversor.png"),   
             null, 
             ""
         );
 
         if (input != null) {           
             int seleccion = Integer.parseInt(input);
-            System.out.println(seleccion);
+
             if (seleccion >= 1 && seleccion <= opcionesMenu.length) {
                 return seleccion;
             }
@@ -33,7 +33,7 @@ public class menu {
             titulo, 
             JOptionPane.DEFAULT_OPTION,
             JOptionPane.PLAIN_MESSAGE, 
-            new ImageIcon("C:\\Users\\Usuario\\Desktop\\tp final\\tp-final\\src\\img\\conversor.png"),
+            new ImageIcon("C:\\Users\\Usuario\\Desktop\\tp-final\\src\\img\\conversor.png"), 
             inputMenu,
             inputMenu[0]
         );
@@ -52,7 +52,7 @@ public class menu {
         String tabla = String.format(formatMeses, "Divisa");
 
         for (int i = 0; i < meses.length; i++) {
-            tabla += String.format(formatMeses, meses[i]) ;
+            tabla += String.format(formatMeses, meses[i]);
         }
         tabla += "\n";
 
@@ -62,7 +62,7 @@ public class menu {
                 String formatoNumero = String.format("%.2f", tiposDeCambio[i][j]);
                
                 if (formatoNumero.length() < 6) {
-                    tabla += String.format("%-16s", formatoNumero) ;
+                    tabla += String.format("%-16s", formatoNumero);
                 } else if (formatoNumero.length() < 7) {
                     tabla += String.format("%-14s", formatoNumero);
                 }

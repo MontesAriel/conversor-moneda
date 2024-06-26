@@ -18,6 +18,6 @@ public class App {
         };
     
         //bucle del menu con opciones
-        bucleOpciones.bucleOpciones(DIVISAS, MESES, tiposDeCambio);
+        BucleOpciones.bucleOpciones(DIVISAS, MESES, tiposDeCambio);
     }  
 }
